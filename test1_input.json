@@ -1,0 +1,60 @@
+{
+  "version": "15.1.4",
+  "vulnerabilities": [
+    {
+      "id": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2",
+      "category": "sast",
+      "name": "Reflected Cross-Site Scripting (XSS)",
+      "description": "The application's HTTP response reflects un-sanitized data from an HTTP request. This can allow an attacker to craft a malicious link, which, when clicked by a victim, will execute arbitrary Javascript in the victim's browser. This can be used to steal session cookies, redirect users, or capture credentials.",
+      "cve": "semgrep_id:php.lang.security.echo-get.echo-get",
+      "severity": "Medium",
+      "scanner": {
+        "id": "semgrep",
+        "name": "Semgrep"
+      },
+      "location": {
+        "file": "vulnerable_code_example.php",
+        "start_line": 1
+      },
+      "primary_identifier": [
+        {
+          "type": "cwe",
+          "name": "CWE-79",
+          "value": "79",
+          "url": "https://cwe.mitre.org/data/definitions/79.html"
+        },
+        {
+          "type": "owasp",
+          "name": "A03:2021 - Injection",
+          "value": "A03:2021"
+        }
+	  ],
+      "solution": "",
+      "remediations": []
+    }
+  ],
+  "scan": {
+    "analyzer": {
+      "id": "semgrep",
+      "name": "Semgrep",
+      "url": "https://gitlab.com/gitlab-org/security-products/analyzers/semgrep",
+      "vendor": {
+        "name": "GitLab"
+      },
+      "version": "5.32.0"
+    },
+    "scanner": {
+      "id": "semgrep",
+      "name": "Semgrep",
+      "url": "https://github.com/returntocorp/semgrep",
+      "vendor": {
+        "name": "GitLab"
+      },
+      "version": "1.110.0"
+    },
+    "type": "sast",
+    "start_time": "2025-10-18T10:30:01",
+    "end_time": "2025-10-18T10:30:05",
+    "status": "success"
+  }
+}
